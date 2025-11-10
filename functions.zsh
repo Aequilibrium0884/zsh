@@ -21,6 +21,14 @@ pac() {
     fi
   done
 }
-mv() {
-  sudo mv "$1" "$2" && sudo chown -R "$USER:$USER" "$2"
+
+vi() {
+  local dir
+  dir="$(dirname -- "$1")"
+  case "$dir" in
+    '.') nvim "$1"
+    ;;
+    *) cd "$dir" && nvim "$1"
+    ;;
+  esac
 }

@@ -1,6 +1,6 @@
 
 opt=/opt
-HOME=/home/aware
+config="$XDG_CONFIG_HOME"
 
 # OPT_HOME
 home=~opt/aware
@@ -14,8 +14,8 @@ ombind=~dot/omarchy_bindings
 systemd=~dot/systemd_user
 
 # HOME_FOLDER
-hyprd=~HOME/.config/hypr
-down=~HOME/Downloads
+hyprd="$HOME/.config/hypr"
+down="$HOME/Downloads"
 
 # EXECUTABLES
 executables=~home/executables

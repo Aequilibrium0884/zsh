@@ -3,7 +3,7 @@
 alias ss="sudo systemctl"
 alias sss="sudo systemctl status"
 alias ssr="sudo systemctl restart"
-alias sse="sudo systemctl enable"
+alias sse="sudo systemctl enable --now"
 alias ssd="sudo systemctl disable"
 alias sssp="sudo systemctl stop"
 alias ssst="sudo systemctl start"
@@ -30,12 +30,11 @@ alias ln='sudo ln -s'
 alias npm='sudo npm'
 
 # nvim
-alias zshrc='nvim ~/.zshrc'
-alias nv='nvim'
+alias zshrc="cd ~dot && nvim zsh"
 alias inlu='nvim ~nvimconf'
 
 # Grep
-alias -g G="grep"
+alias -g G="grep -i"
 alias -g GR="grep -iR"
 alias -g GV="grep -iv"
 
@@ -49,11 +48,11 @@ alias lsr='eza --tree --recursive --level=3'
 
 
 # Movement
-alias ..//=../../
-alias ..///=../../../
-alias ..////=../../../../
-alias ../////=../../../../../
-alias ..//////=../../../../../../
+alias ..//='cd ../../'
+alias ..///='cd ../../../'
+alias ..////='cd ../../../../'
+alias ../////='cd ../../../../../'
+alias ..//////='cd ../../../../../../'
 
 # Movement To Hash Dirs
 alias opt='cd ~opt'
@@ -78,7 +77,6 @@ alias wez='cd ~wez'
 # pacman
 alias pacfiles='pacman -F'
 alias pacfileupg='sudo pacman -Fy'
-unalias pacin
 alias pacin='sudo pacman -S --noconfirm --needed'
 alias pacins='sudo pacman -U'
 alias pacinsd='sudo pacman -S --asdeps'

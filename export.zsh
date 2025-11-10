@@ -8,8 +8,14 @@ export LESS="-RFX"
 export GREP_OPTIONS="--color=auto"
 export TERM=xterm-256color
 export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_DATA_HOME="$HOME/.local"
+export XDG_CACHE_HOME="$HOME/.cache"
+export RUSTUP_HOME="$XDG_DATA_HOME/rustup"
+export CARGO_HOME="$XDG_DATA_HOME/cargo"
+export MOZ_ENABLE_WAYLAND=1
+export MOZ_WEBRENDER=1
 
-#
+
 if [[ -S "$HOME/.ssh/agent.sock" ]]; then
   :
 elif [[ ! -S "$HOME/.ssh/agent.sock" ]]; then
