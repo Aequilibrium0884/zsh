@@ -32,6 +32,7 @@ alias npm='sudo npm'
 # nvim
 alias zshrc="cd ~dot && nvim zsh"
 alias inlu='nvim ~nvimconf'
+alias fstab="sudo nvim /etc/fstab"
 
 # Grep
 alias -g G="grep -i"

@@ -69,18 +69,61 @@ ownership() {
 }
 
 file_install() {
-  local SUBJECT
+  local SUBJECT MAX COUNT
   SUBJECT="$1"
-  sudo install -m 644 -D -o "$UID" -g "$(id -g)" /dev/null "$SUBJECT" 
+  COUNT=0
+  MAX=4
+  checkt "$SUBJECT"
+  while [[ "$PRESENCE" == false && $COUNT -lt "$MAX" ]]; do 
+    sudo install -m 644 -D -o "$UID" -g "$(id -g)" /dev/null "$SUBJECT" 
+    ((COUNT++))
+    checkt "$SUBJECT"
+  done
+}
+dir_install() {
+  local SUBJECT MAX COUNT
+  SUBJECT="$1"
+  COUNT=0
+  MAX=4
+  checkt "$SUBJECT"
+  while [[ "$PRESENCE" == false && $COUNT -lt "$MAX" ]]; do 
+    sudo install -d -o aware -g aware "$SUBJECT"
+    ((COUNT++))
+    checkt "$SUBJECT"
+  done
 }
 
+dltn() {
+  local SUBJECT MAX COUNT
+  SUBJECT="$1"
+  COUNT=0
+  MAX=4
+  checkt "$SUBJECT"
+  while [[ "$PRESENCE" == true && $COUNT -lt "$MAX" ]]; do 
+    sudo rm -rf "$SUBJECT" 
+    ((COUNT++))
+    checkt "$SUBJECT"
+  done
+}
 
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
+ZSHENV_FILE="$HOME/.zshenv"
+PLUGIN_HOME="/opt/$USER/plugins"
+OPT_HOME="/opt/$USER"
 
-ZSH_FILE="$HOME/.zshrc"
+checkt "$ZSHENV_FILE" && [[ "$PRESENCE" == false ]] || dltn "$ZSHENV_FILE" 2>/dev/null
 
-checkt "$ZSH_FILE" 
-[[ "$PRESENCE" == true ]] && sudo rm -rf "$ZSH_FILE" && checkt "$ZSH_FILE"
+ 
+checkt "$ZSHENV_FILE" && [[ "$PRESENCE" == true ]] || file_install "$ZSHENV_FILE" 2>/dev/null
 
-file_install 
+echo 'export ZDOTDIR="/opt/$USER/dotfiles/zsh"' >>"$ZSHENV_FILE"
+
+ZINIT_HOME="$PLUGIN_HOME/zinit/zinit.git"
+
+checkt $ZINIT_HOME && [[ "$PRESENCE" == true ]] || dir_install "$(dirname -- $ZINIT_HOME)"
+git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
+
+ownership "$OPT_HOME"
+exec zsh
+
