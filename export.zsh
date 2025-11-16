@@ -43,10 +43,15 @@ export GIT_PAGER="less -FRX"
 export GIT_DEFAULT_BRANCH="main"
 
 # PATH
+
+bin="/opt/$USER/executables/bin"
+GOPATH="/opt/$USER/go"
 path=(
   $HOME/.local/bin
   $HOME/.cargo/env
   $path
+  $bin
+  $GOPATH
   )
   typeset -U path
   path=($^path(N-/))

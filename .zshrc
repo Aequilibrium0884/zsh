@@ -2,7 +2,7 @@ PLUGIN_HOME="/opt/$USER/plugins"
 ZINIT_HOME="$PLUGIN_HOME/zinit/zinit.git"
 source "${ZINIT_HOME}/zinit.zsh"
 if [[ "$USER" == "root" ]]; then
-	USER="aware"
+  USER="$(id -nu 1000)"
 fi
 ZSH_HOME="/opt/$USER/dotfiles/zsh"
 source "$ZSH_HOME/alias.zsh" 

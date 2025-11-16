@@ -87,7 +87,7 @@ dir_install() {
   MAX=4
   checkt "$SUBJECT"
   while [[ "$PRESENCE" == false && $COUNT -lt "$MAX" ]]; do 
-    sudo install -d -o aware -g aware "$SUBJECT"
+    sudo install -d -o "$UID" -g "$(id -g)" "$SUBJECT"
     ((COUNT++))
     checkt "$SUBJECT"
   done

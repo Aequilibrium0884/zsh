@@ -3,9 +3,8 @@ opt=/opt
 config="$XDG_CONFIG_HOME"
 
 # OPT_HOME
-home=~opt/aware
+home=~opt/"$USER"
 dot=~home/dotfiles
-nvimconf=~dot/nvim_config/lua/plugins
 wez=~dot/wezterm
 projects=~dot/projects
 main=~dot/main_stor
@@ -16,6 +15,7 @@ systemd=~dot/systemd_user
 # HOME_FOLDER
 hyprd="$HOME/.config/hypr"
 down="$HOME/Downloads"
+nvimd=~config/nvim
 
 # EXECUTABLES
 executables=~home/executables

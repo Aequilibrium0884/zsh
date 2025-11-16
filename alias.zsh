@@ -11,13 +11,12 @@ alias ssdr="sudo systemctl daemon-reload"
 
 # Basic Commands
 alias c="clear"
-alias touch="sudo install -D -m 644  -o aware -g aware /dev/null"
-alias mkdir="sudo install -d -o aware -g aware"
-alias cp="sudo install -o aware -g aware"
+alias touch="sudo install -D -m 644  -o $USER -g $USER /dev/null"
+alias mkdir="sudo install -d -o $USER -g $USER"
+alias cp="sudo install -o $USER -g $USER"
 alias rm='rm -rf'
 #
-alias chown="sudo chown -R aware:aware"
-alias chwn="sudo chown -R aware:aware ./*"
+alias chwn="sudo chown -R $USER:$USER ./*"
 alias chmod="sudo chmod -R"
 alias chmr="sudo chmod -R +r"
 alias chmw="sudo chmod -R +w"
