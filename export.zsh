@@ -41,17 +41,25 @@ export VISUAL="nvim"
 # Git
 export GIT_PAGER="less -FRX"
 export GIT_DEFAULT_BRANCH="main"
+export GIT_CONFIG_GLOBAL="/opt/$USER/dotfiles/git/gitconfig"
+
+# Postgresql
+export PSQLRC="/opt/$USER/dotfiles/psql/psqlrc"
+export PGHOST=localhost
+export PGUSER=proof
+export PGDATABASE=amal
+
 
 # PATH
 
 bin="/opt/$USER/executables/bin"
-GOPATH="/opt/$USER/go"
+export GOPATH="/opt/$USER/go"
 path=(
   $HOME/.local/bin
   $HOME/.cargo/env
   $path
   $bin
-  $GOPATH
+  $GOPATH/bin
   )
   typeset -U path
   path=($^path(N-/))
