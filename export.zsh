@@ -59,13 +59,6 @@ path=(
   $HOME/.cargo/env
   $path
   $bin
-<<<<<<< HEAD
-  $GOPATH/bin
-=======
-  $GOPATH
-  $HOME/go/bin/
-  $XDG_DATA_HOME/cargo/bin/
->>>>>>> 482fecd (Fri Feb 20 12:23:31 AM EST 2026)
   )
   typeset -U path
   path=($^path(N-/))
