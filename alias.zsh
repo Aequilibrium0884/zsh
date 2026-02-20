@@ -1,5 +1,6 @@
 
 # systemctl 
+alias y="yt-dlp"
 alias ss="sudo systemctl"
 alias sss="sudo systemctl status"
 alias ssr="sudo systemctl restart"
@@ -10,10 +11,14 @@ alias ssst="sudo systemctl start"
 alias ssdr="sudo systemctl daemon-reload"
 
 # Basic Commands
+alias s="sudo !!"
+alias sp="sudo cp -r"
+alias smv="sudo mv"
+alias smkdir="sudo mkdir -p"
+alias stouch="sudo touch"
 alias c="clear"
-alias touch="sudo install -D -m 644  -o $USER -g $USER /dev/null"
-alias mkdir="sudo install -d -o $USER -g $USER"
-alias cp="sudo install -o $USER -g $USER"
+alias mkdir="mkdir -p"
+alias cp="cp -r"
 alias rm='rm -rf'
 #
 alias chwn="sudo chown -R $USER:$USER ./*"
@@ -39,20 +44,21 @@ alias -g GR="grep -iR"
 alias -g GV="grep -iv"
 
 # ls -- eza
-alias ls='eza --tree --level=1 --octal-permissions --long --no-permissions --no-filesize --no-time'
-alias lsa='eza --tree --level=1 --octal-permissions --long --no-permissions --no-filesize --almost-all --no-time'
-alias lsl='eza --tree --level 1 --long --octal-permissions --no-permissions --total-size --no-time'
-alias ls.='eza --tree --level 1 --long --octal-permissions --almost-all'
-alias lss='eza --tree --level 1 --long --octal-permissions --no-permissions --total-size --no-time --no-user'
-alias lsr='eza --tree --recursive --level=3'
+alias l='eza --tree --level=1 --octal-permissions --long --no-permissions --no-filesize --no-time'
+alias la='eza --tree --level=1 --octal-permissions --long --no-permissions --no-filesize --almost-all --no-time'
+alias ll='eza --tree --level 1 --long --octal-permissions --no-permissions --total-size --no-time'
+alias l.='eza --tree --level 1 --long --octal-permissions --almost-all'
+alias las='eza --tree --level 1 --long --octal-permissions --no-permissions --total-size --no-time --no-user'
+alias lr='eza --tree --recursive --level=3'
 
 
 # Movement
-alias ..//='cd ../../'
-alias ..///='cd ../../../'
-alias ..////='cd ../../../../'
-alias ../////='cd ../../../../../'
-alias ..//////='cd ../../../../../../'
+alias cdd='cd ../'
+alias cddd='cd ../../'
+alias cdddd='cd ../../../'
+alias cddddd='cd ../../../../'
+alias cdddddd='cd ../../../../../'
+alias cddddddd='cd ../../../../../../'
 
 # Movement To Hash Dirs
 alias opt='cd ~opt'
@@ -60,7 +66,8 @@ alias home='cd ~home'
 alias dot='cd ~dot'
 alias systemd="cd ~systemd"
 alias bin="cd ~bin"
-alias projects='cd ~projects'
+alias prj='cd ~projects'
+alias gdd='cd ~gdd'
 alias secs='cd ~secs'
 alias executables="cd ~executables"
 alias config='cd ~config'

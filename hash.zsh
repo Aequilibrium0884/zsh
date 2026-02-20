@@ -6,11 +6,9 @@ config="$XDG_CONFIG_HOME"
 home=~opt/"$USER"
 dot=~home/dotfiles
 wez=~dot/wezterm
-projects=~dot/projects
-main=~dot/main_stor
-secs=~dot/sec_stor
-ombind=~dot/omarchy_bindings
+gdd="/opt/$USER/dotfiles/Projects/go_project"
 systemd=~dot/systemd_user
+projects=~dot/projects
 
 # HOME_FOLDER
 hyprd="$HOME/.config/hypr"
@@ -20,4 +18,5 @@ nvimd=~config/nvim
 # EXECUTABLES
 executables=~home/executables
 bin=~executables/bin
+
 
