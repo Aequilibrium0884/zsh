@@ -43,20 +43,20 @@ export GIT_PAGER="less -FRX"
 export GIT_DEFAULT_BRANCH="main"
 export GIT_CONFIG_GLOBAL="/opt/$USER/dotfiles/git/gitconfig"
 
-# Postgresql
-export PSQLRC="/opt/$USER/dotfiles/psql/psqlrc"
-export PGHOST=localhost
-export PGUSER=proof
-export PGDATABASE=amal
-
 
 # PATH
 
 bin="/opt/$USER/executables/bin"
 export GOPATH="/opt/$USER/go"
+export GOBIN="/opt/$USER/go/bin"
+export LOCALBIN="$XDG_DATA_HOME/bin"
+
 path=(
   $HOME/.local/bin
   $HOME/.cargo/env
+  $CARGO_HOME/bin
+  $GOBIN
+  $LOCALBIN
   $path
   $bin
   )
