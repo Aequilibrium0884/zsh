@@ -108,6 +108,7 @@ dltn() {
 
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
+
 ZSHENV_FILE="$HOME/.zshenv"
 PLUGIN_HOME="/opt/$USER/plugins"
 OPT_HOME="/opt/$USER"

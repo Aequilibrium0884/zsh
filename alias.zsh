@@ -1,13 +1,14 @@
 
 # systemctl 
 alias y="yt-dlp"
-alias ss="sudo systemctl"
+alias ss="sudo ss -tulpn"
 alias sss="sudo systemctl status"
 alias ssr="sudo systemctl restart"
 alias sse="sudo systemctl enable --now"
 alias ssd="sudo systemctl disable"
 alias sssp="sudo systemctl stop"
 alias ssst="sudo systemctl start"
+
 alias ssdr="sudo systemctl daemon-reload"
 alias ssdx="sudo systemctl daemon-reexec"
 

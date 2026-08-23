@@ -49,6 +49,7 @@ export GIT_CONFIG_GLOBAL="/opt/$USER/dotfiles/git/gitconfig"
 bin="/opt/$USER/executables/bin"
 export GOPATH="/opt/$USER/go"
 export GOBIN="/opt/$USER/go/bin"
+export GOMODCACHE=/opt/steel/go/pkg/mod
 export LOCALBIN="$XDG_DATA_HOME/bin"
 
 path=(
