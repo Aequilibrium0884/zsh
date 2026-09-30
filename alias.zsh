@@ -1,5 +1,7 @@
 
-# systemctl 
+alias containers="cd ~containers"
+alias etccon="cd ~etccon"
+# systemctl
 alias y="yt-dlp"
 alias ss="sudo ss -tulpn"
 alias sss="sudo systemctl status"

@@ -115,7 +115,7 @@ OPT_HOME="/opt/$USER"
 
 checkt "$ZSHENV_FILE" && [[ "$PRESENCE" == false ]] || dltn "$ZSHENV_FILE" 2>/dev/null
 
- 
+
 checkt "$ZSHENV_FILE" && [[ "$PRESENCE" == true ]] || file_install "$ZSHENV_FILE" 2>/dev/null
 
 echo 'export ZDOTDIR="/opt/$USER/dotfiles/zsh"' >>"$ZSHENV_FILE"
