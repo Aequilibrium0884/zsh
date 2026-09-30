@@ -1,6 +1,11 @@
 
+# containers
 alias con="cd ~containers"
 alias etccon="cd ~etccon"
+alias podman="sudo podman"
+alias podlogs="sudo podman logs"
+alias podinspect="sudo podman inspect"
+
 # systemctl
 alias y="yt-dlp"
 alias ss="sudo ss -tulpn"
