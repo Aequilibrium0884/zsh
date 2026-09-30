@@ -1,5 +1,5 @@
 
-alias containers="cd ~containers"
+alias con="cd ~containers"
 alias etccon="cd ~etccon"
 # systemctl
 alias y="yt-dlp"
