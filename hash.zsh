@@ -1,6 +1,8 @@
 
 opt=/opt
 config="$XDG_CONFIG_HOME"
+etccon="/etc/containers/systemd"
+containers="/opt/containers"
 
 # OPT_HOME
 home=~opt/"$USER"
